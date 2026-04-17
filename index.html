@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vishal Soneji — Gameplay Engineer</title>
+  <meta name="description" content="Portfolio of Vishal Soneji — Gameplay Programmer specializing in Unreal Engine, Unity, and building game systems that feel good to play." />
+  <meta property="og:title"       content="Vishal Soneji — Gameplay Engineer" />
+  <meta property="og:description" content="I judge every system by one question: does it feel good to play?" />
+  <meta property="og:image"       content="[OG-IMAGE-PATH]" />
+  <meta property="og:type"        content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom crosshair cursor (hidden on touch) -->
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <div class="cursor-ring"></div>
+    <div class="cursor-dot"></div>
+  </div>
+
+  <!-- ── NAV ──────────────────────────────────────── -->
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav-logo">VS<span class="blink">_</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about"    class="nav-link">ABOUT</a></li>
+      <li><a href="#skills"   class="nav-link">SKILLS</a></li>
+      <li><a href="#projects" class="nav-link">PROJECTS</a></li>
+      <li><a href="#devdiary" class="nav-link">DEV DIARY</a></li>
+      <li><a href="#contact"  class="nav-link">CONTACT</a></li>
+    </ul>
+    <div class="nav-end">
+      <a href="https://github.com/VishalSoneji7" target="_blank" rel="noopener" class="nav-github" aria-label="GitHub Profile">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.157-1.11-1.465-1.11-1.465-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.091-.647.35-1.088.636-1.339-2.221-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.295 2.748-1.025 2.748-1.025.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.847-2.337 4.695-4.566 4.944.359.309.678.919.678 1.852 0 1.336-.012 2.417-.012 2.747 0 .268.18.579.688.481C19.138 20.2 22 16.447 22 12.021 22 6.484 17.523 2 12 2z"/>
+        </svg>
+      </a>
+      <button class="nav-burger" id="navBurger" aria-label="Toggle navigation">
+        <span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile drawer -->
+  <div class="drawer" id="drawer" aria-hidden="true">
+    <ul>
+      <li><a href="#about"    class="drawer-link">ABOUT</a></li>
+      <li><a href="#skills"   class="drawer-link">SKILLS</a></li>
+      <li><a href="#projects" class="drawer-link">PROJECTS</a></li>
+      <li><a href="#devdiary" class="drawer-link">DEV DIARY</a></li>
+      <li><a href="#contact"  class="drawer-link">CONTACT</a></li>
+    </ul>
+  </div>
+  <div class="drawer-mask" id="drawerMask"></div>
+
+  <!-- ── HERO ─────────────────────────────────────── -->
+  <section id="hero" class="hero">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hero-noise" aria-hidden="true"></div>
+    <div class="hero-inner container">
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <span class="eyebrow-dot"></span>
+          <span>GAMEPLAY ENGINEER &nbsp;·&nbsp; USC GRADUATE &nbsp;·&nbsp; 5 YRS BUILDING</span>
+        </div>
+        <h1 class="hero-name">
+          VISHAL<br>SONEJI<span class="name-cursor blink">_</span>
+        </h1>
+        <div class="hero-type-row">
+          <span class="type-prefix">// </span>
+          <span id="typewriter"></span><span class="type-cursor blink">|</span>
+        </div>
+        <p class="hero-tagline">&ldquo;I judge every system by one question: does it feel good to play?&rdquo;</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn-primary nav-link">VIEW MY WORK</a>
+          <a href="Vishal_Soneji_GameDev.docx" download class="btn-ghost">DOWNLOAD RESUME ↗</a>
+        </div>
+      </div>
+      <div class="hero-aside" aria-hidden="true">
+        <div class="hero-aside-inner">
+          <span class="aside-num">01</span>
+          <div class="aside-bars">
+            <div class="aside-bar"></div>
+            <div class="aside-bar"></div>
+            <div class="aside-bar aside-bar--accent"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>SCROLL</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ─────────────────────────────────────── -->
+  <section id="about" class="about reveal-section">
+    <div class="container">
+      <div class="s-head">
+        <span class="s-num">02</span>
+        <h2 class="s-title">ABOUT</h2>
+        <div class="s-rule"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-photo-wrap">
+          <div class="about-photo-frame">
+            <div class="photo-placeholder">
+              <!-- SWAP: replace this div with <img src="your-photo.jpg" alt="Vishal Soneji"> -->
+              <span class="photo-initials">VS</span>
+              <span class="photo-hint">[YOUR PHOTO]</span>
+            </div>
+            <div class="photo-accent" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="about-body">
+          <p class="about-bio">I'm a Gameplay Programmer and recent USC graduate who has been playing and dissecting games for as long as I can remember — long before I ever wrote a line of code. That lifelong relationship with games, now backed by a computer science degree and nearly 5 years of building them, is what shapes how I work. I care deeply about how a game feels to play, and I use that perspective to build systems that are tight, responsive, and satisfying. Good gameplay isn't accidental — it's engineered.</p>
+          <div class="stats-row">
+            <div class="stat-item">
+              <span class="stat-value" data-target="5" data-suffix=" YRS">0</span>
+              <span class="stat-label">Making Games</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value" data-target="15" data-suffix="+">0</span>
+              <span class="stat-label">Projects Built</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value" data-target="5" data-suffix="">0</span>
+              <span class="stat-label">Languages</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value" data-target="3" data-suffix="">0</span>
+              <span class="stat-label">Engines Used</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKILLS ────────────────────────────────────── -->
+  <section id="skills" class="skills reveal-section">
+    <div class="container">
+      <div class="s-head">
+        <span class="s-num">03</span>
+        <h2 class="s-title">SKILLS</h2>
+        <div class="s-rule"></div>
+      </div>
+      <div class="skills-table">
+        <div class="skill-row">
+          <span class="skill-cat">// LANGUAGES</span>
+          <div class="skill-chips">
+            <span class="chip">C++</span>
+            <span class="chip">C#</span>
+            <span class="chip">Python</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">Blueprint</span>
+          </div>
+        </div>
+        <div class="skill-row">
+          <span class="skill-cat">// ENGINES</span>
+          <div class="skill-chips">
+            <span class="chip">Unreal Engine 5</span>
+            <span class="chip">Unity 3D</span>
+            <span class="chip">Prime Engine</span>
+            <span class="chip">Godot</span>
+            <span class="chip">GameMaker Studio</span>
+          </div>
+        </div>
+        <div class="skill-row">
+          <span class="skill-cat">// SYSTEMS</span>
+          <div class="skill-chips">
+            <span class="chip">Gameplay Mechanics</span>
+            <span class="chip">AI / Pathfinding</span>
+            <span class="chip">Physics Systems</span>
+            <span class="chip">Animation Systems</span>
+            <span class="chip">Particle / VFX</span>
+            <span class="chip">Frustum Culling</span>
+            <span class="chip">Procedural Generation</span>
+            <span class="chip">Performance Optimization</span>
+            <span class="chip">Multiplayer / Networking</span>
+          </div>
+        </div>
+        <div class="skill-row">
+          <span class="skill-cat">// TOOLS</span>
+          <div class="skill-chips">
+            <span class="chip">Git</span>
+            <span class="chip">Blender</span>
+            <span class="chip">Photoshop</span>
+            <span class="chip">Steam SDK</span>
+            <span class="chip">OpenGL</span>
+            <span class="chip">Visual Studio</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ──────────────────────────────────── -->
+  <section id="projects" class="projects reveal-section">
+    <div class="container">
+      <div class="s-head">
+        <span class="s-num">04</span>
+        <h2 class="s-title">PROJECTS</h2>
+        <div class="s-rule"></div>
+      </div>
+      <div id="projectsContainer"></div>
+    </div>
+  </section>
+
+  <!-- ── DEV DIARY ─────────────────────────────────── -->
+  <section id="devdiary" class="devdiary reveal-section">
+    <div class="container">
+      <div class="s-head">
+        <span class="s-num">05</span>
+        <h2 class="s-title">DEV DIARY</h2>
+        <div class="s-rule"></div>
+      </div>
+      <p class="devdiary-intro">How I think. How I solve. How I ship.</p>
+      <div class="devlogs-grid">
+
+        <article class="devlog-card">
+          <div class="devlog-bar" aria-hidden="true"></div>
+          <div class="devlog-meta">
+            <span class="devlog-file">frustum_culling.log</span>
+            <span class="devlog-tag">Prime Engine · C++</span>
+          </div>
+          <h3 class="devlog-title">Finding the Cut: Culling Without Killing Fidelity</h3>
+          <p class="devlog-body">The obvious approach is cull as aggressively as possible for maximum performance — but push the distance too close and players notice objects popping in. The real work was finding the threshold where culling dropped draw calls significantly, but the boundary sat just outside what the player's eye naturally tracks. It's not a formula — it's iteration. The lesson: performance optimization is only good if the player never knows it happened.</p>
+        </article>
+
+        <article class="devlog-card">
+          <div class="devlog-bar" aria-hidden="true"></div>
+          <div class="devlog-meta">
+            <span class="devlog-file">physics_collision.log</span>
+            <span class="devlog-tag">Prime Engine · C++</span>
+          </div>
+          <h3 class="devlog-title">Collision From Scratch: Dot Products and Guesswork</h3>
+          <p class="devlog-body">Building physics from scratch in Prime Engine meant no rules — just vectors. Collision detection came down to dot and cross products to figure out not just whether objects had hit, but which face the impact came from and what direction to apply response force. Getting that wrong meant tunnelling or wrong-angle launches. The breakthrough: treat every collision as a conversation between two normals and let the math decide, not hardcoded responses.</p>
+        </article>
+
+        <article class="devlog-card">
+          <div class="devlog-bar" aria-hidden="true"></div>
+          <div class="devlog-meta">
+            <span class="devlog-file">animation_blend.log</span>
+            <span class="devlog-tag">Prime Engine · C++</span>
+          </div>
+          <h3 class="devlog-title">Blending Without Breaking: Keeping Animations Human</h3>
+          <p class="devlog-body">Naively blending two animations lets the skeleton happily twist a spine 180 degrees if the math allows it. My constraint: the character's line of motion must always read naturally, even mid-blend. That meant clamping rotation ranges on spine and shoulder bones, and locking scale at 1 throughout. If a blend makes a character look like they're fighting themselves, the player feels it immediately — even if they can't name why.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ───────────────────────────────────── -->
+  <section id="contact" class="contact reveal-section">
+    <div class="container">
+      <div class="s-head">
+        <span class="s-num">06</span>
+        <h2 class="s-title">CONTACT</h2>
+        <div class="s-rule"></div>
+      </div>
+      <div class="contact-inner">
+        <p class="contact-avail">Open to full-time roles, contract work, and game jam collabs.</p>
+        <a href="mailto:vishalsoneji21@gmail.com" class="contact-email">
+          vishalsoneji21@gmail.com<span class="contact-arrow"> ↗</span>
+        </a>
+        <div class="contact-chips">
+          <a href="https://github.com/VishalSoneji7"           target="_blank" rel="noopener" class="contact-chip">GITHUB ↗</a>
+          <a href="https://www.linkedin.com/in/vishal-soneji/" target="_blank" rel="noopener" class="contact-chip">LINKEDIN ↗</a>
+          <a href="mailto:vishalsoneji21@gmail.com"                                            class="contact-chip">EMAIL ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ────────────────────────────────────── -->
+  <footer class="footer">
+    <span class="footer-name">VISHAL SONEJI</span>
+    <span class="footer-copy">© 2025 &nbsp;·&nbsp; GAME DEVELOPER</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
