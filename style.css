@@ -650,6 +650,248 @@ body::before {
 }
 
 /* ═══════════════════════════════════════════════════════════════
+   FEATURED — LUCKY DUCKIES
+═══════════════════════════════════════════════════════════════ */
+.featured {
+  padding: 120px 0 100px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.ld-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 36px;
+}
+.ld-eyebrow {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+.ld-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  color: var(--fg);
+  margin-bottom: 14px;
+}
+.ld-role {
+  font-family: var(--font-display);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  color: var(--fg-3);
+}
+.ld-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.ld-tag {
+  font-family: var(--font-display);
+  font-size: 0.54rem;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  border: 1px solid var(--accent-border);
+  padding: 4px 10px;
+}
+
+/* Media row: key art + trailer */
+.ld-media {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  background: var(--border);
+  margin-bottom: 40px;
+}
+.ld-keyart, .ld-trailer {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--bg);
+}
+.ld-keyart img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ld-trailer { cursor: none; }
+.ld-trailer-thumb {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.5);
+  transition: filter 0.3s var(--ease), transform 0.5s var(--ease);
+}
+.ld-trailer:hover .ld-trailer-thumb { filter: brightness(0.72); transform: scale(1.04); }
+.ld-trailer-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  z-index: 2;
+}
+.ld-play-btn {
+  width: 64px; height: 64px;
+  border: 2px solid var(--accent);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: none;
+  transition: background 0.2s, box-shadow 0.25s, transform 0.2s;
+}
+.ld-play-btn svg { fill: var(--accent); transition: fill 0.2s; }
+.ld-trailer:hover .ld-play-btn { background: var(--accent); box-shadow: 0 0 32px var(--accent-glow); transform: scale(1.06); }
+.ld-trailer:hover .ld-play-btn svg { fill: #000; }
+.ld-trailer-label {
+  font-family: var(--font-display);
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+  color: var(--fg);
+}
+.ld-trailer iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; z-index: 3; }
+
+.ld-summary {
+  font-size: 1.02rem;
+  line-height: 1.8;
+  color: var(--fg-2);
+  max-width: 780px;
+  margin-bottom: 44px;
+}
+
+/* Stats strip */
+.ld-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid var(--border);
+  margin-bottom: 56px;
+}
+.ld-stat {
+  padding: 24px 20px;
+  border-right: 1px solid var(--border);
+  transition: background 0.2s;
+}
+.ld-stat:last-child { border-right: none; }
+.ld-stat:hover { background: var(--bg-3); }
+.ld-stat-val {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.ld-stat-label {
+  font-family: var(--font-display);
+  font-size: 0.56rem;
+  letter-spacing: 0.1em;
+  color: var(--fg-3);
+}
+
+/* Subheads */
+.ld-subhead {
+  font-family: var(--font-display);
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+/* Tech cards */
+.ld-tech {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  background: var(--border);
+  margin-bottom: 56px;
+}
+.ld-tech-card {
+  background: var(--bg-3);
+  padding: 26px 26px 28px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.2s;
+}
+.ld-tech-card:hover { background: var(--bg-4); }
+.ld-tech-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s var(--ease);
+}
+.ld-tech-card:hover::before { transform: scaleX(1); }
+.ld-tech-tag {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.52rem;
+  letter-spacing: 0.1em;
+  color: var(--fg-3);
+  margin-bottom: 10px;
+}
+.ld-tech-title {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--fg);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+.ld-tech-body {
+  font-size: 0.86rem;
+  line-height: 1.72;
+  color: var(--fg-2);
+}
+
+/* Gallery */
+.ld-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: var(--border);
+  margin-bottom: 48px;
+}
+.ld-shot {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--bg-3);
+}
+.ld-shot img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s var(--ease); }
+.ld-shot:hover img { transform: scale(1.05); }
+.ld-shot-empty { display: flex; align-items: center; justify-content: center; }
+.ld-shot-empty span {
+  font-family: var(--font-display);
+  font-size: 0.56rem;
+  letter-spacing: 0.1em;
+  color: var(--fg-3);
+}
+
+.ld-cta { display: flex; gap: 14px; flex-wrap: wrap; }
+
+/* Featured responsive */
+@media (max-width: 768px) {
+  .ld-media { grid-template-columns: 1fr; }
+  .ld-tech  { grid-template-columns: 1fr; }
+  .ld-stats { grid-template-columns: repeat(2, 1fr); }
+  .ld-stat:nth-child(2) { border-right: none; }
+  .ld-stat:nth-child(3), .ld-stat:nth-child(4) { border-top: 1px solid var(--border); }
+  .ld-stat:nth-child(4) { border-right: none; }
+  .ld-gallery { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .ld-stats { grid-template-columns: 1fr 1fr; }
+  .ld-cta .btn-primary, .ld-cta .btn-ghost { width: 100%; justify-content: center; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
    PROJECTS — MOSAIC + MODAL
 ═══════════════════════════════════════════════════════════════ */
 .projects {

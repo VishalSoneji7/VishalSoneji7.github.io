@@ -504,6 +504,22 @@ function initNavScroll() {
   }, { passive: true });
 }
 
+// ── Featured trailer (click-to-play) ─────────────────────────
+function initFeaturedTrailer() {
+  const wrap = document.getElementById('ldTrailer');
+  if (!wrap) return;
+  wrap.addEventListener('click', () => {
+    const id = wrap.dataset.ytid;
+    if (!id) return;
+    wrap.innerHTML = `<iframe
+      src="https://www.youtube.com/embed/${id}?autoplay=1&rel=0&modestbranding=1"
+      title="Lucky Duckies trailer"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>`;
+  });
+}
+
 // ── Init ──────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   populateProjects();
@@ -516,4 +532,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initDrawer();
   initActiveNav();
   initNavScroll();
+  initFeaturedTrailer();
 });

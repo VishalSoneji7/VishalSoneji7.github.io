@@ -27,6 +27,7 @@
     <a href="#hero" class="nav-logo">VS<span class="blink">_</span></a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#about"    class="nav-link">ABOUT</a></li>
+      <li><a href="#featured" class="nav-link">FEATURED</a></li>
       <li><a href="#skills"   class="nav-link">SKILLS</a></li>
       <li><a href="#projects" class="nav-link">PROJECTS</a></li>
       <li><a href="#devdiary" class="nav-link">DEV DIARY</a></li>
@@ -48,6 +49,7 @@
   <div class="drawer" id="drawer" aria-hidden="true">
     <ul>
       <li><a href="#about"    class="drawer-link">ABOUT</a></li>
+      <li><a href="#featured" class="drawer-link">FEATURED</a></li>
       <li><a href="#skills"   class="drawer-link">SKILLS</a></li>
       <li><a href="#projects" class="drawer-link">PROJECTS</a></li>
       <li><a href="#devdiary" class="drawer-link">DEV DIARY</a></li>
@@ -140,11 +142,104 @@
     </div>
   </section>
 
+  <!-- ── FEATURED — LUCKY DUCKIES ──────────────────── -->
+  <section id="featured" class="featured reveal-section">
+    <div class="container">
+      <div class="s-head">
+        <span class="s-num">03</span>
+        <h2 class="s-title">FEATURED</h2>
+        <div class="s-rule"></div>
+      </div>
+
+      <div class="ld">
+        <div class="ld-head">
+          <div class="ld-titles">
+            <span class="ld-eyebrow">// SHIPPED STEAM TITLE</span>
+            <h3 class="ld-title">LUCKY DUCKIES</h3>
+            <p class="ld-role">Gameplay Programmer · USC Games · May 2025 – May 2026</p>
+          </div>
+          <div class="ld-tags">
+            <span class="ld-tag">Co-op Adventure</span>
+            <span class="ld-tag">Unreal Engine 5</span>
+            <span class="ld-tag">C++</span>
+          </div>
+        </div>
+
+        <div class="ld-media">
+          <div class="ld-keyart">
+            <img src="LuckyDuckies/key-art.png" alt="Lucky Duckies key art" loading="lazy" />
+          </div>
+          <div class="ld-trailer" id="ldTrailer" data-ytid="KrvDEl7s_Q0">
+            <img class="ld-trailer-thumb" src="https://img.youtube.com/vi/KrvDEl7s_Q0/maxresdefault.jpg" alt="Lucky Duckies trailer" loading="lazy" />
+            <div class="ld-trailer-overlay">
+              <button class="ld-play-btn" aria-label="Play trailer">
+                <svg width="24" height="24" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+              <span class="ld-trailer-label">WATCH TRAILER</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="ld-summary">Lucky Duckies is a co-op adventure game released publicly on Steam, built at USC Games. As a full-stack gameplay programmer I worked across multiplayer networking, player systems, visual polish, and performance optimization — owning features end to end, from low-level C++ systems to in-engine tuning.</p>
+
+        <div class="ld-stats">
+          <div class="ld-stat"><span class="ld-stat-val">6</span><span class="ld-stat-label">Levels Shipped</span></div>
+          <div class="ld-stat"><span class="ld-stat-val">90–120</span><span class="ld-stat-label">FPS (from 50)</span></div>
+          <div class="ld-stat"><span class="ld-stat-val">100+</span><span class="ld-stat-label">Lights Audited</span></div>
+          <div class="ld-stat"><span class="ld-stat-val">15+</span><span class="ld-stat-label">Bugs Resolved</span></div>
+        </div>
+
+        <h4 class="ld-subhead">// WHAT I BUILT</h4>
+        <div class="ld-tech">
+          <article class="ld-tech-card">
+            <span class="ld-tech-tag">C++ · NETWORKING</span>
+            <h5 class="ld-tech-title">Split-Screen Co-op</h5>
+            <p class="ld-tech-body">Architected a split-screen co-op system in C++ on a listen-server model, partitioning a 1920×1080 viewport into two independent 960×1080 player-controller cameras at runtime with dedicated HUD layers per player — enabling seamless local + online co-op as a core feature.</p>
+          </article>
+          <article class="ld-tech-card">
+            <span class="ld-tech-tag">RENDERING · POST-PROCESS</span>
+            <h5 class="ld-tech-title">Occlusion Silhouette</h5>
+            <p class="ld-tech-body">Built a player occlusion silhouette using a Custom Depth stencil and a hand-authored post-process material, rendering a colored outline whenever a player is hidden behind geometry. It sharpened spatial awareness — 70% of players responded positively across all 6 levels.</p>
+          </article>
+          <article class="ld-tech-card">
+            <span class="ld-tech-tag">SKELETAL MESH</span>
+            <h5 class="ld-tech-title">Cosmetic Skin System</h5>
+            <p class="ld-tech-body">Engineered a skeletal socket and bone-attachment framework, authoring 5 sockets (head, neck, torso, left/right wing) in the Skeleton Editor so every accessory animates correctly with player movement at runtime — a deployable cosmetic progression layer.</p>
+          </article>
+          <article class="ld-tech-card">
+            <span class="ld-tech-tag">PERFORMANCE · LUMEN</span>
+            <h5 class="ld-tech-title">Lighting Optimization</h5>
+            <p class="ld-tech-body">Led lighting optimization across all 6 levels in a mixed static/Lumen pipeline, auditing 100+ lights via Optimization View modes to eliminate GPU overdraw — lifting frame rate from an unstable 50fps to a consistent 90–120fps on target hardware.</p>
+          </article>
+          <article class="ld-tech-card">
+            <span class="ld-tech-tag">GAMEPLAY</span>
+            <h5 class="ld-tech-title">Cross-Discipline Bug Fixing</h5>
+            <p class="ld-tech-body">Resolved 15+ cross-discipline gameplay bugs, including a checkpoint/respawn regression that spawned players underground — fixed by replacing random sphere-offset logic with a deterministic world-space height clamp against level collision.</p>
+          </article>
+        </div>
+
+        <h4 class="ld-subhead">// GALLERY</h4>
+        <div class="ld-gallery">
+          <!-- Add more screenshots/GIFs here: <div class="ld-shot"><img src="LuckyDuckies/your-shot.png" alt="..." loading="lazy" /></div> -->
+          <div class="ld-shot"><img src="LuckyDuckies/key-art.png" alt="Lucky Duckies key art" loading="lazy" /></div>
+          <div class="ld-shot ld-shot-empty"><span>[ ADD SCREENSHOT ]</span></div>
+          <div class="ld-shot ld-shot-empty"><span>[ ADD SCREENSHOT ]</span></div>
+        </div>
+
+        <div class="ld-cta">
+          <!-- TODO: replace href with the exact Steam store page URL for Lucky Duckies -->
+          <a href="https://store.steampowered.com/search/?term=Lucky+Duckies" target="_blank" rel="noopener" class="btn-primary">WISHLIST ON STEAM ↗</a>
+          <a href="https://youtu.be/KrvDEl7s_Q0" target="_blank" rel="noopener" class="btn-ghost">WATCH TRAILER ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ── SKILLS ────────────────────────────────────── -->
   <section id="skills" class="skills reveal-section">
     <div class="container">
       <div class="s-head">
-        <span class="s-num">03</span>
+        <span class="s-num">04</span>
         <h2 class="s-title">SKILLS</h2>
         <div class="s-rule"></div>
       </div>
@@ -202,7 +297,7 @@
   <section id="projects" class="projects reveal-section">
     <div class="container">
       <div class="s-head">
-        <span class="s-num">04</span>
+        <span class="s-num">05</span>
         <h2 class="s-title">PROJECTS</h2>
         <div class="s-rule"></div>
       </div>
@@ -214,7 +309,7 @@
   <section id="devdiary" class="devdiary reveal-section">
     <div class="container">
       <div class="s-head">
-        <span class="s-num">05</span>
+        <span class="s-num">06</span>
         <h2 class="s-title">DEV DIARY</h2>
         <div class="s-rule"></div>
       </div>
@@ -259,7 +354,7 @@
   <section id="contact" class="contact reveal-section">
     <div class="container">
       <div class="s-head">
-        <span class="s-num">06</span>
+        <span class="s-num">07</span>
         <h2 class="s-title">CONTACT</h2>
         <div class="s-rule"></div>
       </div>
