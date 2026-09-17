@@ -60,11 +60,11 @@ Three core files plus a media folder:
 
 ## Publishing
 
-This repository **is** the live site: a GitHub Pages user site at **https://vishalsoneji7.github.io**, repo `VishalSoneji7/VishalSoneji7.github.io`, branch `main`, local clone at `V:\VishalSoneji7.github.io`. Edit files here and push — Pages redeploys automatically. After publishing, hard-refresh (Ctrl+Shift+R) to bypass browser/CDN cache.
+This repository **is** the live site: a GitHub Pages user site at **https://vishalsoneji7.github.io**, repo `VishalSoneji7/VishalSoneji7.github.io`, branch `main`, local clone at `V:\PORTFOLIO\VishalSoneji7.github.io`. Edit files here and push — Pages redeploys automatically. After publishing, hard-refresh (Ctrl+Shift+R) to bypass browser/CDN cache.
 
 - **Git workflow**: Vishal commits and pushes himself, using commit messages Claude supplies. Do not run `git commit` / `git push` on his behalf unless he asks.
 - **Auth**: pushes must authenticate as `VishalSoneji7` (the repo owner) via the Windows credential store. A different cached account (e.g. `vsoneji7`) will be rejected with a 403.
-- **Stale duplicate**: `V:\PORTFOLIO\vishal` contains an older copy of these files and has no git remote of its own — do **not** edit there; it does not publish anywhere.
+- **Archived duplicate**: `V:\PORTFOLIO\archive\previous-static-site` contains the older static website and its historical instructions/settings. It has no git remote and does not publish anywhere. Edit this repository instead. Supporting recordings are in `V:\PORTFOLIO\media\videos`; the incomplete React prototype is in `V:\PORTFOLIO\archive\react-prototype`. See `V:\PORTFOLIO\README.md` for the workspace guide.
 
 ## Change Log & Decisions
 

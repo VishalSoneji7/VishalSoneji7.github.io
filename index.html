@@ -322,8 +322,8 @@
             <span class="devlog-file">frustum_culling.log</span>
             <span class="devlog-tag">Prime Engine · C++</span>
           </div>
-          <h3 class="devlog-title">Finding the Cut: Culling Without Killing Fidelity</h3>
-          <p class="devlog-body">The obvious approach is cull as aggressively as possible for maximum performance — but push the distance too close and players notice objects popping in. The real work was finding the threshold where culling dropped draw calls significantly, but the boundary sat just outside what the player's eye naturally tracks. It's not a formula — it's iteration. The lesson: performance optimization is only good if the player never knows it happened.</p>
+          <h3 class="devlog-title">Testing Visibility with 1,000 Imrods</h3>
+          <p class="devlog-body">Starting with the course-provided Prime Engine, I built bounding-box calculations, colored debug boxes, and six camera-plane tests, including near and far boundaries. I used a scene of 1,000 Imrods and the FPS counter to compare objects in and out of view. On my gaming laptop, I observed approximately 40 to 90 FPS while recording and 90 to 260 FPS without recording. The project notes describe the hardware, comparison, and implementation limits.</p>
         </article>
 
         <article class="devlog-card">
@@ -332,8 +332,8 @@
             <span class="devlog-file">physics_collision.log</span>
             <span class="devlog-tag">Prime Engine · C++</span>
           </div>
-          <h3 class="devlog-title">Collision From Scratch: Dot Products and Guesswork</h3>
-          <p class="devlog-body">Building physics from scratch in Prime Engine meant no rules — just vectors. Collision detection came down to dot and cross products to figure out not just whether objects had hit, but which face the impact came from and what direction to apply response force. Getting that wrong meant tunnelling or wrong-angle launches. The breakthrough: treat every collision as a conversation between two normals and let the math decide, not hardcoded responses.</p>
+          <h3 class="devlog-title">From Passing Through Obstacles to Sliding Along Them</h3>
+          <p class="devlog-body">The supplied engine let the soldier walk straight through the car. I built sphere-based character collision, box collision for the car, and floor-plane detection. The collision query finds the closest point on the box in local coordinates and checks its distance from the character in world space. The demo shows the soldier colliding and sliding along the car, then falling when it walks beyond the floor.</p>
         </article>
 
         <article class="devlog-card">
@@ -342,8 +342,8 @@
             <span class="devlog-file">animation_blend.log</span>
             <span class="devlog-tag">Prime Engine · C++</span>
           </div>
-          <h3 class="devlog-title">Blending Without Breaking: Keeping Animations Human</h3>
-          <p class="devlog-body">Naively blending two animations lets the skeleton happily twist a spine 180 degrees if the math allows it. My constraint: the character's line of motion must always read naturally, even mid-blend. That meant clamping rotation ranges on spine and shoulder bones, and locking scale at 1 throughout. If a blend makes a character look like they're fighting themselves, the player feels it immediately — even if they can't name why.</p>
+          <h3 class="devlog-title">Making Existing Animation Clips Blend</h3>
+          <p class="devlog-body">Prime Engine supplied animation clips, but they could not blend. I implemented full-body, partial-body, and additive blending in C++. Full-body blending combines weighted joint poses, partial-body selection splits contributions by joint range, and additive blending applies a source/reference transform difference to a target pose. Debug labels show the active animation tracks, frame positions, and weights.</p>
         </article>
 
       </div>
@@ -378,6 +378,6 @@
     <span class="footer-copy">© 2025 &nbsp;·&nbsp; GAME DEVELOPER</span>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=20260911-content"></script>
 </body>
 </html>
